@@ -1,0 +1,12 @@
+[Unit]
+Description=photo-fetcher
+After=network.target
+
+[Service]
+User=oracle
+Group=oinstall
+ExecStart=/path/to/my/binary
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
