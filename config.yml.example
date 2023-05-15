@@ -1,9 +1,7 @@
 database:
   username: YOUR_DB_USERNAME
   password: YOUR_DB_PASSWORD
-  host: YOUR_DB_HOST
-  port: YOUR_DB_PORT
-  name: YOUR_DB_NAME
+  dsn: YOUR_DATA_SOURCE_NAME
 
 server:
   port: YOUR_SERVER_PORT

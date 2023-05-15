@@ -21,12 +21,10 @@ func main() {
 	// Extract database connection parameters from config
 	dbUsername := viper.GetString("database.username")
 	dbPassword := viper.GetString("database.password")
-	dbHost := viper.GetString("database.host")
-	dbPort := viper.GetString("database.port")
-	dbName := viper.GetString("database.name")
+	dbDSN := viper.GetString("database.dsn")
 
 	// Set up database connection
-	db, err := sql.Open("godror", fmt.Sprintf("%s/%s@%s:%s/%s", dbUsername, dbPassword, dbHost, dbPort, dbName))
+	db, err := sql.Open("godror", fmt.Sprintf(`user="%s" password="%s" connectString="%s"`, dbUsername, dbPassword, dbDSN))
 	if err != nil {
 		log.Fatal(err)
 	}
