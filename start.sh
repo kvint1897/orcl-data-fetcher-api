@@ -5,4 +5,4 @@ export ORAENV_ASK=NO
 . oraenv
 export ORAENV_ASK=YES
 
-./photo-fetcher
+./orcl-data-fetcher-api

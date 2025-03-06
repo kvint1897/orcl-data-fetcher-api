@@ -1,4 +1,4 @@
-module photo-fetcher
+module orcl-data-fetcher-api
 
 go 1.20
 

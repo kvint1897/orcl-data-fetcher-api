@@ -1,11 +1,12 @@
 [Unit]
-Description=photo-fetcher
+Description=orcl-data-fetcher-api
 After=network.target
 
 [Service]
 User=oracle
 Group=oinstall
-ExecStart=/path/to/my/binary
+WorkingDirectory=/path/to/dir
+ExecStart=/path/to/dir/binary
 Restart=on-failure
 
 [Install]
